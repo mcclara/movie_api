@@ -1,5 +1,4 @@
 /*jshint esversion: 6 */
-const url = require('url');
 
 const http = require('http'),
   fs = require('fs'),
@@ -27,7 +26,6 @@ const http = require('http'),
 
 }).listen(8080);
 console.log('My test server is running on Port 8080.');
-const http = require('http');
 
 http.createServer((request, response) => {
   response.writeHead(200, {'Content-Type': 'text/plain'});
