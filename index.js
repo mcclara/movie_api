@@ -48,7 +48,7 @@ let movies = [
     genre: ["Action", "Adventure", "Fantasy"],
     rating: "PG-13",
     runtime: "2h 21min",
-    director: : "Patty Jenkins",
+    director: "Patty Jenkins",
     starring: ["Gal Gadot", "Chris Pine", "Connie Nielson", "Robin Wright"],
     synopsis: "When a pilot crashes and tells of conflict in the outside world, Diana, an Amazonian warrior in training, leaves home to fight a war, discovering her full powers and true destiny."
   },
@@ -92,7 +92,7 @@ let movies = [
     genre: ["Action", "Crime", "Thriller"],
     rating: "R",
     runtime: "2h 12min",
-    directors: ["Antoine Fuqua"],
+    directors: "Antoine Fuqua",
     starring: ["Denzel Washington", "Marton Csokas", "Chloë Grace Moretz"],
     synopsis: "A man who believes he has put his mysterious past behind him cannot stand idly by when he meets a young girl under the control of ultra-violent Russian gangsters."
   },
