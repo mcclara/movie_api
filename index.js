@@ -146,35 +146,35 @@ app.get('/movies', (req, res) => {
   res.json(movies);
 });
 
-app.get('/movies/:title', (req, res) => {
+app.get('/movies/title', (req, res) => {
   res.send('Successful GET request returning data about a movie by its title');
 });
 
-app.get('/movies/genre/:title', (req, res) => {
+app.get('/movies/genre/title', (req, res) => {
   res.send('Successful GET request returning a list of films by genre');
 });
 
-app.get('/movies/:director/:name', (req, res) => {
+app.get('/movies/director/name', (req, res) => {
   res.send('Successful GET request returning the name of the director by film');
 });
 
-app.post('/users', (req, res) => {
+app.post('/users' (req, res) => {
   res.send('Successful POST request returning confirmation of registration');
 });
 
-app.put('/users/:username', (req, res) => {
+app.put('/users/username', (req, res) => {
   res.send('Successful PUT request returning confirmation of username update');
 });
 
-app.post('/users/:username/movies/:title', (req, res) => {
+app.post('/users/username/movies/title', (req, res) => {
   res.send('Successful POST request returning confirmation that movie has been added to list');
 });
 
-app.delete('/movies/:users/username/movies/:title', (req, res) => {
+app.delete('/movies/users/username/movies/title', (req, res) => {
   res.send('Successful DELETE request returning confirmation that movie has been removed from list');
 });
 
-app.delete('/users/:username', (req, res) => {
+app.delete('/users/username', (req, res) => {
   res.send('Successful DELETE request returning confirmation that the users account has been removed');
 });
 
