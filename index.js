@@ -158,7 +158,7 @@ app.get('/movies/director/name', (req, res) => {
   res.send('Successful GET request returning the name of the director by film');
 });
 
-app.post('/users' (req, res) => {
+app.post('/users', (req, res) => {
   res.send('Successful POST request returning confirmation of registration');
 });
 
