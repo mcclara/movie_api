@@ -17,10 +17,6 @@ app.get('/secreturl', (req, res) => {
   res.send('This is a secret url with super top-secret content.');
 });
 
-app.listen(8080, () => {
-    console.log('Your app is listening on port 8080.');
-});
-
 // Should connet to the documentation file
 app.use(express.static('public'));
 
@@ -141,3 +137,47 @@ let movies = [
     synopsis: "In this movie, we see the world through the eyes of main character Justice (Janet Jackson), a young African-American poet. A mail carrier invites a few friends along for a long overnight delivery run."
   }
 ]
+
+app.get('/', (req, res) => {
+  res.send('Welcome to MyMovieConnect');
+});
+
+app.get('/movies', (req, res) => {
+  res.json(movies);
+});
+
+app.get('/movies/:title', (req, res) => {
+  res.send('Successful GET request returning data about a movie by its title');
+});
+
+app.get('/movies/genre/:title', (req, res) => {
+  res.send('Successful GET request returning a list of films by genre');
+});
+
+app.get('/movies/:director/:name', (req, res) => {
+  res.send('Successful GET request returning the name of the director by film');
+});
+
+app.post('/users', (req, res) => {
+  res.send('Successful POST request returning confirmation of registration');
+});
+
+app.put('/users/:username', (req, res) => {
+  res.send('Successful PUT request returning confirmation of username update');
+});
+
+app.post('/users/:username/movies/:title', (req, res) => {
+  res.send('Successful POST request returning confirmation that movie has been added to list');
+});
+
+app.delete('/movies/:users/username/movies/:title', (req, res) => {
+  res.send('Successful DELETE request returning confirmation that movie has been removed from list');
+});
+
+app.delete('/users/:username', (req, res) => {
+  res.send('Successful DELETE request returning confirmation that the users account has been removed');
+});
+
+app.listen(8080, () => {
+    console.log('Your app is listening on port 8080.');
+});
