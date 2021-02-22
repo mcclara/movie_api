@@ -11,5 +11,86 @@
     This app will allow users the opportunity to create profiles where they are able to compile a list of their favorite films.  They will also be able to search films and access the films metadata.
     </p>
   </header>
+  <table>
+    <tr>
+      <th>Business Logic</th>
+      <th>Endpoint (URL)</th>
+      <th>HTTP Method</th>
+      <th>Request Body Data Format</th>
+      <th>Response Body Data Format</th>
+    </tr>
+
+    <tr>
+      <td>Return a list of all movies</td>
+      <td>/movies</td>
+      <td>GET</td>
+      <td>None</td>
+      <td>A Json Object with data about all of the movies</td>
+    </tr>
+
+    <tr>
+      <td>Return data about a movie by it's title</td>
+      <td>/movies/:title</td>
+      <td>GET</td>
+      <td>None</td>
+      <td>A Json object with data about a single movie's description, genre, director, img URL and whether it is a feature film</td>
+    </tr>
+
+    <tr>
+      <td>Return a list of films by genre</td>
+      <td>/movies/:genre</td>
+      <td>GET</td>
+      <td>None</td>
+      <td>A Json oject with descriptions of genres</td>
+    </tr>
+
+    <tr>
+      <td>Returns the name of the director by film</td>
+      <td>/movies/:director</td>
+      <td>GET</td>
+      <td>None</td>
+      <td>A Json Object with data about director</td>
+    </tr>
+
+    <tr>
+      <td>Allows New Users to register</td>
+      <td>/users</td>
+      <td>POST</td>
+      <td>A JSON Object that will hold new users data including, name, username, password, date of birth, email address and location</td>
+      <td>A JSON Object with data about the user that was added, including an id</td>
+    </tr>
+
+    <tr>
+      <td>Allows the user to update their username</td>
+      <td>/users/:username</td>
+      <td>PUT</td>
+      <td>A JSON object with users updated username</td>
+      <td>A JSON Object holding users updated data<td>
+    </tr>
+
+    <tr>
+      <td>Allow Users to add a film to their favorite's list</td>
+      <td>/users/:username/movies/:title</td>
+      <td>POST</td>
+      <td>A JSON object with data about the added film</td>
+      <td>A message stating that the film was removed</td>
+    </tr>
+
+    <tr>
+      <td>Allow Users to remove a film from their favorite's list</td>
+      <td>/users/:username/movies/:title</td>
+      <td>DELETE</td>
+      <td>None</td>
+      <td>A message stating that the film was removed</td>
+    </tr>
+
+    <tr>
+      <td>Allow existing users to unregister</td>
+      <td>/users/:username/</td>
+      <td>DELETE</td>
+      <td>None</td>
+      <td>A message stating that the account was removed</td>
+    </tr>
+  </table>
 </body>
 </html>
