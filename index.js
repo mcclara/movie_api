@@ -143,11 +143,11 @@ app.get('/movies/:title', (req, res) => {
 });
 
 app.get('/movies/genre/:title', (req, res) => {
-  res.send('Successful GET request returning a list of films by genre');
+  res.send('Successful GET request returning a description of the genre requested');
 });
 
 app.get('/movies/director/:name', (req, res) => {
-  res.send('Successful GET request returning the name of the director by film');
+  res.send('Successful GET request returning a bio of the director request');
 });
 
 app.post('/users', (req, res) => {
